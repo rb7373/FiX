@@ -1,0 +1,104 @@
+@import url('reset.css');
+ @charset "utf-8";
+/* CSS Document */
+
+/*Estilo general*/
+
+body {
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	color: #fff;
+	font-family: 'Josefin Slab', Arial, sans-serif;
+	font-size: 13px;
+	background-image: url(../img/bgEcuaciones.jpg);
+}
+
+.blurMenuPrincipal {
+	padding: 0px;
+	margin: 0 0 10px 0;
+	position: relative;
+}
+.blurMenuPrincipal li {
+	font-size: 50px;
+	display: block;
+}
+
+/*Estilo especifico*/ 
+
+.contenidoMenuPrincipal {
+	margin: 0 20px;
+	position:relative;
+    width:580px;
+    margin: 0 auto;
+}
+
+
+.contenedorMenuPrincipal{
+	position:relative;
+}
+a{
+	color: #fff;
+	text-decoration: none;
+}
+
+.blurMenu {
+	padding: 50px 0px;
+	margin: 0 auto;
+	margin-top:10%;
+	position: relative;
+	background: rgba(0,0,0,0.7);
+	width: 560px;
+	height: 460px;
+	-webkit-border-radius: 280px; /*Debe ser la mitad del ancho*/
+	-moz-border-radius: 280px; /*Debe ser la mitad del ancho*/
+	border-radius: 280px; /*Debe ser la mitad del ancho*/
+	-webkit-transition: background-color 0.5s ease-in-out;
+	-moz-transition: background-color 0.5s ease-in-out;
+	-o-transition: background-color 0.5s ease-in-out;
+	-ms-transition: background-color 0.5s ease-in-out;
+	transition: background-color 0.5s ease-in-out;
+}
+.blurMenu:hover {
+	background: rgba(0,0,0,0.2);
+}
+.blurMenu li {
+	font-size: 40px;
+	display: block;
+	line-height: 50px;
+}
+.blurMenu li a {
+	white-space: nowrap;
+	display: block;
+	text-align: center;
+	text-shadow: 0px 0px 3px #fff;
+	letter-spacing: 1px;
+	-moz-transform: scale(0.8);
+	-ms-transform: scale(0.8);
+	-o-transform: scale(0.8);
+	-webkit-transform: scale(0.8);
+	transform: scale(0.8);
+	-webkit-transition: all 0.4s linear;
+	-moz-transition: all 0.4s linear;
+	-o-transition: all 0.4s linear;
+	-ms-transition: all 0.4s linear;
+	transition: all 0.4s linear;
+}
+.blurMenu:hover li a {
+	text-shadow: 0px 0px 10px #fff;
+}
+.blurMenu li a:hover {
+	text-shadow: none;
+	color: #fff;
+	background: rgba(100,200,240,.9); /*Importante*/
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	-o-transform: scale(1);
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
