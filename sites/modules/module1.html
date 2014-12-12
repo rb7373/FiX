@@ -1,10 +1,177 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="utf-8">
-<title>FiX</title>
+    <meta charset="UTF-8">
+    <title>FiX</title>
+
+    <!--fullpage.js-->
+
+    <link rel="stylesheet" type="text/css" href="../../css/jquery.fullPage.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="../../js/jquery.easings.min.js"></script>
+
+    <!-- This following line needed in the case of using the plugin option `scrollOverflow:true` -->
+    <script type="text/javascript" src="../../js/jquery.slimscroll.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.fullPage.js"></script>
+
+    <!--fullpage.js-->
+
+    <style>
+        
+        /* Style for our header texts. */
+        
+        h1 {
+            font-size: 5em;
+            font-family: arial, helvetica;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        .intro p {
+            color: #fff;
+        }
+        
+        /* Centered texts in each section*/
+        
+        div.section {
+            text-align: center;
+            font-size: 5em;
+            font-family: arial, helvetica;
+        }
+        
+        /* Fixed header and footer.*/
+        
+        #header {
+            position: fixed;
+            height: 60px;
+            display: block;
+            width: 100%;
+            background: #333;
+            z-index: 9;
+            text-align: center;
+            color: #f2f2f2;
+            padding: 20px 0 0 0;
+        }
+        #footer {
+            position: fixed;
+            height: 20px;
+            display: block;
+            width: 100%;
+            background: #333;
+            z-index: 9;
+            text-align: center;
+            color: #f2f2f2;
+            padding: 20px 0 0 0;
+        }
+        #header {
+            top: 0px;
+        }
+        #footer {
+            bottom: 0px;
+        }
+        
+        /* Bottom menu */
+        
+        #infoMenu {
+            bottom: 80px;
+        }
+        #infoMenu li a {
+            color: #fff;
+            z-index: 999;
+        }
+        
+        /* Overwriting styles for the navigation dots (to place it where we want)*/
+        
+        .fp-slidesNav.bottom {
+            bottom: 60px;
+            /*background: rgba(255, 255, 255, 0.5);
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;*/
+            border-radius: 5px;
+            
+        }
+        /*Se sobre escribe la posicion de la flecha derecha*/
+        
+        .fp-controlArrow.fp-next {
+            right: 60px;
+            border-width: 38.5px 0 38.5px 34px;
+            border-color: transparent transparent transparent #fff;
+        }
+        /* Overwriting fullPage.js tooltip color
+	* --------------------------------------- */
+        
+        .fp-tooltip{
+            position: absolute;
+             /*#000000*/
+            background: #FFFFFF; /*#FFFFFF*/
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 6px;
+            margin-right: 10px;
+            width: 140px;
+        }
+        #fp-nav span,
+        .fp-slidesNav span {
+            border-color: #000000;
+            border-width: 2px;
+        }
+        #fp-nav li .active span,
+        .fp-slidesNav .active span {
+            background: rgba(100, 200, 240, .9);
+            /*#1D9DD8;*/
+        }
+        #fp-nav {
+            background: rgba(255, 255, 255, 0.5);
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+        }
+        
+        #fp-nav ul li:hover .fp-tooltip {
+            width: 140px;
+            font-size: 14px;
+            color: #000000;
+        }
+    </style>
+
+
 </head>
-Module 1
+
 <body>
+
+    <div id="header">Header</div>
+    <div id="footer">Footer</div>
+
+    <div id="fullpage">
+        <div class="section">Introcción al tema</div>
+        <div class="section">
+            <div class="slide">Desarrollo del tema parte 1</div>
+            <div class="slide">Desarrollo del tema parte 2</div>
+        </div>
+        <div class="section">Resumen y conceptos clave</div>
+        <div class="section">Práctica</div>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#fullpage').fullpage({
+				anchors: ['Introcción', 'Desarrollo','Resumen','Práctica'],
+				sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE','#1bbc9b', '#4BBFC3', '#7BAABE','#1bbc9b', '#4BBFC3','#1bbc9b'],
+				navigation: true,
+				navigationPosition: 'right',
+				navigationTooltips: ['Introcción', 'Desarrollo','Resumen','Práctica'],
+				slidesNavigation: true,
+				continuousVertical: true,
+				easing: 'easeInQuart', //http://jqueryui.com/resources/demos/effect/easing.html
+				controlArrowColor: '#000000'
+				
+            });
+        });
+    </script>
+    <noscript>
+        Sorry, your browser does not support JavaScript!
+    </noscript>
 </body>
+
 </html>
